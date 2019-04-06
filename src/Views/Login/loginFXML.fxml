@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="blur" prefHeight="655.0" prefWidth="584.0" style="-fx-border-color: black; -fx-border-radius: 25; -fx-background-radius: 25; -fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.LoginController">
+   <children>
+      <AnchorPane fx:id="Header" layoutX="14.0" layoutY="18.0" minHeight="150.0" prefHeight="158.0" prefWidth="563.0" style="-fx-background-color: #4183d7; -fx-background-radius: 25 25 0 0;" AnchorPane.bottomAnchor="567.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="191.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/souk.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="211.0" layoutY="63.0" lineSpacing="1.0" minHeight="70.0" prefHeight="57.0" prefWidth="350.0" text="Ventes et achats des produits artisanaux" textFill="#ffffffc5" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="0.0" layoutX="208.0" layoutY="4.0" prefHeight="90.0" prefWidth="268.0" stylesheets="@style.css" text="Souk lemdina" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="47.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="exit1" fitHeight="57.0" fitWidth="50.0" layoutX="514.0" layoutY="10.0" onMouseClicked="#handleExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/white_circle.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exit" fitHeight="48.0" fitWidth="45.0" layoutX="516.0" layoutY="12.0" onMouseClicked="#handleExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logout_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" fx:id="loginForm" layoutX="2.0" layoutY="144.0" minHeight="570.0" minWidth="566.0" prefHeight="575.0" prefWidth="582.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 0 25 25; -fx-border-radius: 0 0 25 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="143.0">
+         <children>
+            <JFXTextField fx:id="username" labelFloat="true" layoutX="194.0" layoutY="174.0" prefHeight="40.0" prefWidth="250.0" promptText="Username / Email">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="194.0" layoutY="290.0" prefHeight="40.0" prefWidth="257.0" promptText="Mot de passe">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="login" layoutX="66.0" layoutY="389.0" onMouseClicked="#handleLoginClicked" prefHeight="40.0" prefWidth="198.0" style="-fx-background-color: #4183D7;" text="Se connecter" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="25.0" />
+               </font>
+
+            </JFXButton>
+            <ImageView fitHeight="57.0" fitWidth="68.0" layoutX="122.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8_Male_User_64px_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="122.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8_Password_64px_2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="184.0" layoutY="48.0" prefHeight="69.0" prefWidth="215.0" text="Connexion" textFill="#26b99a">
+               <font>
+                  <Font name="Calibri Bold" size="46.0" />
+               </font>
+            </Label>
+            <Label fx:id="chnagerMdp" layoutX="189.0" layoutY="463.0" minWidth="198.0" onMouseClicked="#changerMdpClicked" prefHeight="30.0" prefWidth="198.0" style="-fx-cursor: hand;" text="Mot de passe oublié ?" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="createUser" layoutX="315.0" layoutY="389.0" onMouseClicked="#createUserClicked" prefHeight="40.0" prefWidth="198.0" style="-fx-background-color: #26B99A; -fx-cursor: hand;" text="S'inscrire" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loadPane" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="JavaFXAppPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Entities.NotifiableNotification</class>
+    <class>Entities.Review</class>
+    <class>Entities.Comment</class>
+    <class>Entities.Offer</class>
+    <class>Entities.Category</class>
+    <class>Entities.Job</class>
+    <class>Entities.Report</class>
+    <class>Entities.EmployersBookmark</class>
+    <class>Entities.Notification</class>
+    <class>Entities.FosUser</class>
+    <class>Entities.Note</class>
+    <class>Entities.Bookmark</class>
+    <class>Entities.Portfolio</class>
+    <class>Entities.ReviewEmp</class>
+    <class>Entities.Article</class>
+    <class>Entities.NotifiableEntity</class>
+    <class>Entities.Skills</class>
+    <class>Entities.FreelancersBookmark</class>
+    <class>Entities.Freelancer</class>
+    <class>Entities.Project</class>
+    <class>Entities.Bid</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SmartStart?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>
